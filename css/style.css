@@ -1,0 +1,231 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+@media (min-width:767px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--bg-body);
+  min-height: 100vh;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- table --- */
+.wrapper {
+  width: 100%;
+  overflow: auto;
+}
+
+@media (min-width:1199px) {
+  .wrapper {
+    width: 70%;
+    overflow: auto;
+  }
+}
+
+table {
+  width: 100%;
+  min-width: 550px;
+  text-align: center;
+  border-collapse: collapse;
+  border: none;
+  overflow: scroll;
+}
+
+tr {
+  display: flex;
+  width: 100%;
+}
+
+td,
+th {
+  width: calc((100% - 15%) / 4);
+  border-left: .0625rem solid #eee;
+  padding: .3125rem;
+}
+
+table td:first-child,
+table th:first-child {
+  width: 15%;
+  border-left: none;
+  color: #aaa;
+  font-size: 1.rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+table thead tr:first-child th {
+  background-color: #FC5103;
+  height: 4.375rem;
+  line-height: 4.375rem;
+  font-weight: 400;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+}
+
+table thead tr:last-child th {
+  background-color: #FAFAFA;
+  height: 7.7rem;
+  line-height: 7.7rem;
+  color: #FC5103;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+table thead tr:last-child th p {
+  position: relative;
+  display: inline;
+}
+
+table thead tr:last-child th p>span:first-of-type {
+  position: absolute;
+  top: 0%;
+  left: 102%;
+  font-size: .875rem;
+  text-transform: capitalize;
+  color: #aaa;
+  font-weight: 600;
+}
+
+table thead tr:last-child th p>span:nth-child(2),
+table thead tr:last-child th p>span:nth-child(3) {
+  position: absolute;
+  bottom: 0%;
+  left: 102%;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: #666666;
+  font-weight: 600;
+}
+
+table thead tr:last-child th p>span:nth-child(3) {
+  left: -20%;
+  font-size: 1.4rem;
+}
+
+/* --- body --- */
+table tbody tr:nth-child(even),
+table tfoot tr {
+  background-color: #FAFAFA;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #F7F7F7;
+}
+
+table tbody tr {
+  height: 3.75rem;
+  line-height: 3.125rem;
+}
+
+table tbody tr td:not(:first-of-type) {
+  color: #666666;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+table tbody tr td span.true,
+table tbody tr td span.false {
+  display: inline-block;
+  position: relative;
+}
+
+table tbody tr td span.true::before,
+table tbody tr td span.true::after,
+table tbody tr td span.false::before,
+table tbody tr td span.false::after {
+  content: '';
+  display: inline-block;
+  background-color: #666666;
+  width: .23rem;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+}
+
+table tbody tr td span.true::before {
+  height: .5rem;
+  transform: translate(-150%, -0%) rotate(-45deg);
+  -webkit-transform: translate(-150%, -0%) rotate(-45deg);
+  -moz-transform: translate(-150%, -0%) rotate(-45deg);
+  -ms-transform: translate(-150%, -0%) rotate(-45deg);
+  -o-transform: translate(-150%, -0%) rotate(-45deg);
+}
+
+table tbody tr td span.true::after {
+  height: .8rem;
+  transform: translate(0%, 0%) rotate(45deg);
+  -webkit-transform: translate(0%, 0%) rotate(45deg);
+  -moz-transform: translate(0%, 0%) rotate(45deg);
+  -ms-transform: translate(0%, 0%) rotate(45deg);
+  -o-transform: translate(0%, 0%) rotate(45deg);
+}
+
+table tbody tr td span.false::after,
+table tbody tr td span.false::before {
+  height: .9rem;
+}
+
+table tbody tr td span.false::after {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+table tbody tr td span.false::before {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+/* --- tfoot --- */
+tfoot tr td {
+  height: 5rem;
+  line-height: 4.375rem;
+}
+
+tfoot tr td a {
+  color: #fff;
+  background-color: #333;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: .3125rem 1.25rem;
+  border-radius: .4rem;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  -ms-border-radius: .4rem;
+  -o-border-radius: .4rem;
+}
+
+tfoot tr td a:hover,
+tfoot tr td a.buy {
+  background-color: #FC5103;
+}
